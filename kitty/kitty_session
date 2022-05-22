@@ -1,0 +1,14 @@
+# Layout : Tall : One big window on the left and the rest on top of each other on the right
+layout tall
+
+# Modify the startup path of all windows
+cd ~/Documents/42
+
+# Launch a first window with zsh
+launch zsh
+cd ~
+
+# Launch the 3 windows on the right
+launch zsh
+launch zsh
+launch zsh
