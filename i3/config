@@ -9,7 +9,6 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-include $HOME/.config/i3/workspaces.conf
 
 set $mod Mod4
 
@@ -193,7 +192,8 @@ bar {
 }
 exec_always feh --bg-fill /home/vvermot-/Downloads/wallpaper.jpg
 exec_always picom -f
-for_window [class="Firefox"] move to workspace $ws2
+for_window [class="kitty"] move to workspace $ws1
+for_window [class="firefox"] move to workspace $ws2
 for_window [class="Code"] move to workspace $ws3
 for_window [class="Spotify"] move to workspace $ws4
 bindsym $mod+x exec /home/$USER/.config/scripts/lock
@@ -204,6 +204,10 @@ exec --no-startup-id code;
 # monitors variables
 set $fm eDP-1
 set $sm DP-1
+workspace 1 output $fm
+workspace 2 output $sm
+workspace 3 output $sm
+workspace 4 output $fm
 # Color shemes for windows 
 set $bgcolor    #523d64
 set $in-bgcolor #363636
